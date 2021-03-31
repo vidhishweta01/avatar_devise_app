@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+<%= link_to 'Home', root_path, class:"navbar-brand text-light" %>
+  <%# <a class="navbar-brand text-light" href="#">Articles</a> %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <%if user_signed_in?%>
+      <li class="nav-item">
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link text-light" %>
+      </li>
+      <li>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link text-light"%>
+      </li>
+       
+    <% else %>
+       <li>
+      <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link text-light"%>
+      </li>
+      <li>
+      <%= link_to 'Sign in', new_user_session_path, class:"nav-link text-light"%>
+      </li>
+    <%end%>
+    </ul>
+    
+    <%# <%= form_tag(search_page_path, :method => "get", class: 'navbar-form navbar-right') do %>  
+      <%# <div class="input-group">  
+        <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+        <%# <div class="input-group-btn">  
+          <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => 'Search'%>  
+        <%# </div>  
+      </div>  
+    <% end %>
+    <%# <form class="form-inline my-2 my-lg-0">
+
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 bg-danger text-light" type="submit">Search</button>
+    </form> %>
+  </div>
+</nav>
