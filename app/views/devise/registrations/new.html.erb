@@ -1,8 +1,8 @@
-<h2 class="text-center text-light" style="font-weight:bolder">Sign up</h2>
+<h2 class="text-center bg-primary text-light" style="font-weight:bolder">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-<div class="container-fluid w-50" >
+<div class="container-fluid w-50 bg-secondary" style="opacity: 0.78;" >
   <div class="field">
   <%if resource.avatar.attached?%>
   <%=image_tag(resource.avatar)%>
