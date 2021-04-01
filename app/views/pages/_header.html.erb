@@ -14,7 +14,9 @@
       <li>
       <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link text-light"%>
       </li>
-       
+      <li>
+       <%= link_to 'New Post', new_post_path, class:"nav-link text-light"%>
+       </li>
     <% else %>
        <li>
       <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link text-light"%>
@@ -22,6 +24,7 @@
       <li>
       <%= link_to 'Sign in', new_user_session_path, class:"nav-link text-light"%>
       </li>
+      
     <%end%>
     </ul>
     

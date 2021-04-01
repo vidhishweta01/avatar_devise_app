@@ -1,24 +1,23 @@
+<p id="notice"><%= notice %></p>
 <%if current_user%>
-<%#= link_to 'New Post', new_post_path%>
+<%= link_to 'New Post', new_post_path%>
 <div class="float-right rounded">
 <%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle")  %>
 </div>
 <%end%>
-
 <div class="row">
-<% @post.each do |post| %>
+<% @posts.each do |post| %>
 <div class="col-sm-4">
   <div class="card mb-3" >
     <div class="card-body">
       <h5 class="card-title text-dark" style="font-weight: bolder;" >
-      <%= post.author if current_user%>
         <%= post.title %>
       </h5>
       <div class="card-text text-dark" style="background-color: rgb(180, 157, 175);">
         <%= post.blog.truncate(120) %>
       </div>
       <%= link_to 'Read More', post_path(post), class: "btn btn-info" %>
-      <%if current_user && post.user_id == current_user.id%>
+      <%if post.user_id == current_user.id%>
         <%= link_to 'Edit', edit_post_path(post), class:'btn btn-info text-center mx-1'%>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-info text-center' %>
       <%end%>
@@ -27,3 +26,4 @@
 </div>
 <% end %>
 </div>
+

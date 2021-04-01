@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<%if current_user%>
+<%= link_to 'New Post', new_post_path%>
+<div class="float-right rounded">
+<%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle")  %>
+</div>
+<%end%>
+<p>
+  <strong>Author:</strong>
+  <%= @post.author if current_user%>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+<p>
+  <strong>Blog:</strong>
+  <%= @post.blog %>
+</p>
+<%# <%if current_user && post.user_id == current_user.id%> 
+<%#= link_to 'Edit', edit_post_path(@post) %>
+<%# <%end%> 
+<%#= link_to 'Back', root_path %>
