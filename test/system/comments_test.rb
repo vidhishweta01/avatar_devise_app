@@ -1,3 +1,4 @@
+# rubocop:disable Style/StringLiterals
 require "application_system_test_case"
 
 class CommentsTest < ApplicationSystemTestCase
@@ -45,3 +46,4 @@ class CommentsTest < ApplicationSystemTestCase
     assert_text "Comment was successfully destroyed"
   end
 end
+# rubocop:enable Style/StringLiterals

@@ -1,3 +1,4 @@
+# rubocop:disable Style/StringLiterals
 require "application_system_test_case"
 
 class PostsTest < ApplicationSystemTestCase
@@ -45,3 +46,4 @@ class PostsTest < ApplicationSystemTestCase
     assert_text "Post was successfully destroyed"
   end
 end
+# rubocop:enable Style/StringLiterals

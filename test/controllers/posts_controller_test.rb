@@ -1,3 +1,4 @@
+# rubocop:disable Style/StringLiterals
 require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
@@ -46,3 +47,4 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to posts_url
   end
 end
+# rubocop:enable Style/StringLiterals
