@@ -1,5 +1,5 @@
-# frozen_string_literal: true
-
+# rubocop:disable all
+# contains methods for creation of database
 class DeviseCreateUsers < ActiveRecord::Migration[6.1]
   def change
     create_table :users do |t|
@@ -42,3 +42,4 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
     # add_index :users, :unlock_token,         unique: true
   end
 end
+# rubocop:enable all
