@@ -4,7 +4,15 @@
 
 # avatar_devise_app
 
-> This project is about authentications of user signed in,and the part they access on post i.e. they can access author name when they are signed in if not register they can only see posts but not the authors name, project is built with Rails.
+![Screenshot1.png](./app/assets/images/Screenshot1.png)
+
+![Screenshot2.png](./app/assets/images/Screenshot2.png)
+
+![Screenshot3.png](./app/assets/images/Screenshot3.png)
+
+![Screenshot4.png](./app/assets/images/Screenshot4.png)
+
+> This project is about authentications of user signed in,and the part they access on post i.e. they can access author name when they are signed in, if not register they can only see posts but not the authors name, project is built with Rails.
   here I have used active storage for the avatar attached to the user, and devise is used for authentications.
 
 Full project description - [Click here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
@@ -12,19 +20,22 @@ Full project description - [Click here](https://www.theodinproject.com/courses/r
 ## Built With
 - [RubyOnRails](https://rubyonrails.org/)
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-- You need to have [RubyOnRails](https://rubyonrails.org/)installed.
-
-### Setup
+### Instructions
 
 - Download or clone this repo.
-- From your terminal, `cd` into the repo directory and run `bundle install`.
-- Run the command `rails db:create`. This will initialize the necessary migration files.
-- Run the command `rails db:migrate`.
+https://https://github.com/vidhishweta01/Avatar_devise_app
+- From your terminal, `cd` into the repo directory
+
+Enter the proper branch by-
+ git checkout devise
+
+ -Run bin/yarn install, in order to prevent Webpacker::Manifest::MissingEntryError in Devise::Sessions#new error
+
+-run `bundle install`.
+- 
+Run the command `rails db:create`. This will initialize the necessary migration files.
+-
+ Run the command `rails db:migrate`.
 
 ### Usage
 

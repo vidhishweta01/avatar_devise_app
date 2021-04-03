@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-<div class="container-fluid w-50 bg-secondary py-2" style="opacity: 0.78;" >
+<div class="container-fluid w-50 py-2" style="background-color:rgb(255, 219, 175); opacity: 0.78;" >
   <div class="field">
   <%if resource.avatar.attached?%>
   <%=image_tag(resource.avatar)%>

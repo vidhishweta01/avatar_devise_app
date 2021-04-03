@@ -14,20 +14,18 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title , class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :blog %>
-    <%= form.text_area :blog %>
+    <%= form.text_area :blog, size: "30x20" , class:"form-control"%>
   </div>
   
   <div class="field">
     <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author , class:"form-control"%>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<br/>
+    <%= form.submit%>
 <% end %>

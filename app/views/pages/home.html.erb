@@ -11,17 +11,17 @@
   <div class="card mb-3" >
     <div class="card-body">
       <h5 class="card-title text-dark" style="font-weight: bolder;" >
-      <%= post.author if current_user%>
         <%= post.title %>
       </h5>
-      <div class="card-text text-dark" style="background-color: rgb(180, 157, 175);">
+      <div class="card-text text-dark" style="background-color:rgb(255, 219, 175);">
         <%= post.blog.truncate(120) %>
       </div>
       <%= link_to 'Read More', post_path(post), class: "btn btn-info" %>
       <%if current_user && post.user_id == current_user.id%>
         <%= link_to 'Edit', edit_post_path(post), class:'btn btn-info text-center mx-1'%>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-info text-center' %>
-      <%end%>
+      <%end%><br/><br/>
+      <strong><%= post.author if current_user%></strong>
     </div>
   </div>
 </div>
