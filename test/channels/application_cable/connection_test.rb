@@ -1,4 +1,4 @@
-require "test_helper"
+require "test_helper" # rubocop:disable Style/StringLiterals
 
 class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase
   # test "connects with cookies" do

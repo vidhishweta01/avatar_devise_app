@@ -1,4 +1,4 @@
-# contains all the methods for CRUD 
+# contains all the methods for CRUD
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
