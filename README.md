@@ -20,6 +20,13 @@ Full project description - [Click here](https://www.theodinproject.com/courses/r
 ## Built With
 - [RubyOnRails](https://rubyonrails.org/)
 
+## Prerequisite
+- Ruby on rails
+- imagemagick
+  to install imagemagick ..
+  $ apt-get install imagemagick
+
+
 ### Instructions
 
 - Download or clone this repo.

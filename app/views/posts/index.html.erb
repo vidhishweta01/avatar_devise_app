@@ -17,7 +17,7 @@
         <%= post.blog.truncate(120) %>
       </div>
       <%= link_to 'Read More', post_path(post), class: "btn btn-info" %>
-      <%if post.user_id == current_user.id%>
+      <%if signed_in? && post.user_id == current_user.id%>
         <%= link_to 'Edit', edit_post_path(post), class:'btn btn-info text-center mx-1'%>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-info text-center' %>
       <%end%>

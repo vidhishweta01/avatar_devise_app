@@ -1,7 +1,7 @@
 # contains all the methods for CRUD
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show edit update destroy]
-
+  before_action :set_post, only: %i[show edit]
+  before_action :require_login, only: %i[create new edit update destroy]
   # GET /posts or /posts.json
   def index
     @posts = Post.all
@@ -65,5 +65,11 @@ class PostsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def post_params
     params.require(:post).permit(:title, :blog, :user_id, :author)
+  end
+  def require_login
+    unless signed_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to new_user_session_path # halts request cycle
+    end
   end
 end
