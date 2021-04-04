@@ -66,9 +66,10 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :blog, :user_id, :author)
   end
+
   def require_login
-    unless signed_in?
-      flash[:error] = "You must be logged in to access this section"
+    unless signed_in? #rubocop:disable Style/GuardClause
+      flash[:error] = 'You must be logged in to access this section'
       redirect_to new_user_session_path # halts request cycle
     end
   end
