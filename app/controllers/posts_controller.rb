@@ -68,7 +68,7 @@ class PostsController < ApplicationController
   end
 
   def require_login
-    unless signed_in? #rubocop:disable Style/GuardClause
+    unless signed_in? # rubocop:disable Style/GuardClause
       flash[:error] = 'You must be logged in to access this section'
       redirect_to new_user_session_path # halts request cycle
     end
