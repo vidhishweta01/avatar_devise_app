@@ -2,7 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-<div class="container-fluid w-50 py-2" style="background-color:rgb(255, 219, 175); opacity: 0.78;" >
+<div class="container-fluid w-50 py-2" style="background-color:rgb(255, 219, 175); opacity: 0.84;" >
   <div class="field">
   <%if resource.avatar.attached?%>
   <%=image_tag(resource.avatar)%>
@@ -12,22 +12,22 @@
   </div>
 
   <div class="field"style="font-weight: bolder">
-    <%= f.label :email, class:"bg-warning p-1 text-center "%>
+    <%= f.label :email, class:" p-1 text-center "%>
     <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
-  </div>
+  </div><br/>
 
   <div class="field d-flex flex-column w-100">
-    <div><%= f.label :password, class:"bg-warning p-1 text-center"%>
+    <div><%= f.label :password, class:" p-1 text-center"%>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> chars min)</em>
     <% end %></div>
     <div><%= f.password_field :password, autocomplete: "new-password",class:"form-control" %></div>
-  </div>
+  </div><br/>
 
   <div class="field align-middle">
-    <%= f.label :password_confirmation, class:"bg-warning p-1  text-center" %>
+    <%= f.label :password_confirmation, class:" p-1  text-center" %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control"%>
-  </div>
+  </div><br/>
 
   <div class="actions" style="padding-left: 16vw">
     <%= f.submit "Sign up",class:"btn-block btn-danger w-50" %>
