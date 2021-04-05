@@ -1,5 +1,4 @@
 <%if current_user%>
-<%#= link_to 'New Post', new_post_path%>
 <div class="float-right rounded">
 <%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle")  %>
 </div>
@@ -17,11 +16,9 @@
         <%= post.blog.truncate(120) %>
       </div>
       <%= link_to 'Read More', post_path(post), class: "btn btn-info" %>
-      <%if current_user && post.user_id == current_user.id%>
-        <%= link_to 'Edit', edit_post_path(post), class:'btn btn-info text-center mx-1'%>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-info text-center' %>
-      <%end%><br/><br/>
-      <strong><%= post.author if current_user%></strong>
+      <p class="text-decoration-none text-light btn btn-info "><%= authentic_user1(post)%></p>
+      <p class="text-decoration-none text-light btn btn-info "><%= authentic_user2(post)%></p>
+      <%= members_only(post)%>
     </div>
   </div>
 </div>
