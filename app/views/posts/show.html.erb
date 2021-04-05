@@ -6,10 +6,6 @@
 <%end%>
 <div class="p-4", style="background-color:rgb(255, 219, 175);">
 <p>
-  <strong>Author:</strong>
-  <%= @post.author if current_user%>
-</p>
-<p>
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
@@ -18,7 +14,4 @@
   <%= @post.blog %>
 </p>
 </div>
-<%# <%if current_user && post.user_id == current_user.id%> 
-<%#= link_to 'Edit', edit_post_path(@post) %>
-<%# <%end%> 
-<%#= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path>%>
