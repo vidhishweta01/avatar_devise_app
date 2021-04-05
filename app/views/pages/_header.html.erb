@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+<%= link_to 'Home', root_path, class:"navbar-brand text-light" %>
+  <%# <a class="navbar-brand text-light" href="#">Articles</a> %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="d-flex flex-row">
+    <p class="nav-link text-light"><%= sign_out%><p>
+    <p class="nav-link text-light"><%= edit_profile%></p>
+    <p class="nav-link text-light"> <%= new_post%></p>
+    <%= link_to 'All Posts',posts_path, class:"nav-link text-light"%>  
+  </div>
+</nav>

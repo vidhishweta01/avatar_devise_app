@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# rubocop:disable all
 # frozen_string_literal: true
 
 #
@@ -6,7 +7,7 @@
 #
 # The application 'bundle' is installed as part of a gem, and
 # this file is here to facilitate running it.
-#
+
 
 require "rubygems"
 
@@ -112,3 +113,4 @@ m.load_bundler!
 if m.invoked_as_script?
   load Gem.bin_path("bundler", "bundle")
 end
+# rubocop:enable all

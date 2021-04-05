@@ -1,6 +1,6 @@
 ENV['RAILS_ENV'] ||= 'test'
-require_relative "../config/environment"
-require "rails/test_help"
+require_relative "../config/environment" # rubocop:disable Style/StringLiterals
+require "rails/test_help" # rubocop:disable Style/StringLiterals
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
