@@ -6,7 +6,7 @@ module PostsHelper
   end
 
   def authentic_user2(post)
-    if signed_in? && post.user_id == current_user.id # rubocop:disable Style/IfUnlessModifier, Style/GuardClause
+    if signed_in? && post.user_id == current_user.id # rubocop:disable Style/GuardClause
       link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
     end
   end
