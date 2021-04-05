@@ -6,29 +6,10 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <%if user_signed_in?%>
-      <li class="nav-item">
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link text-light" %>
-      </li>
-      <li>
-      <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link text-light"%>
-      </li>
-      <li>
-       <%= link_to 'New Post', new_post_path, class:"nav-link text-light"%>
-       </li>
-    <% else %>
-       <li>
-      <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link text-light"%>
-      </li>
-      <li>
-      <%= link_to 'Sign in', new_user_session_path, class:"nav-link text-light"%>
-      </li>
-      
-    <%end%>
-    <li>
-      <%= link_to 'All Posts',posts_path, class:"nav-link text-light"%>
-      </li>
-    </ul>
+    <div class="d-flex flex-row">
+    <p class="nav-link text-light"><%= sign_out%><p>
+    <p class="nav-link text-light"><%= edit_profile%></p>
+    <p class="nav-link text-light"> <%= new_post%></p>
+    <%= link_to 'All Posts',posts_path, class:"nav-link text-light"%>  
   </div>
 </nav>

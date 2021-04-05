@@ -16,8 +16,8 @@
         <%= post.blog.truncate(120) %>
       </div>
       <%= link_to 'Read More', post_path(post), class: "btn btn-info" %>
-      <p class="text-decoration-none text-light btn btn-info "><%= authentic_user1(post)%></p>
-      <p class="text-decoration-none text-light btn btn-info "><%= authentic_user2(post)%></p>
+      <p><%= authentic_user1(post)%></p>
+      <p><%= authentic_user2(post)%></p>
       <%= members_only(post)%>
     </div>
   </div>
